@@ -25,3 +25,6 @@ Además de señalar la ruta exacta, el archivo debe usar el método de exportaci
 # Requests
 
 También podemos observar que al importar el paquete `orderBy` este a su vez invoca a otros archivos y esto genera una gran cantidad de requests al servidor para poder completar su misión. Cuando esto ocurre en Node.js no lo notamos ya que ocurre en el servidor y estas llamadas son muy rápidas ya que los archivos están en la misma ubicación. En el caso de ES Modules la instrucción de importar un paquete se evalua en el navegador y esto genera un request hacia el servidor donde se encuentre el archivo que buscamos. Recién cuando este archivo se descarga y se ejecuta es que el navegador puede volver a llamar a sus propios `imports` y esto termina generando una larga y lenta lista de dependencias que se cargan secuenciamente.
+
+![image](https://github.com/apx-school/ts-es-modules-and-npm/assets/1208547/8f301630-51ab-48c1-b2af-266796cfc7ac)
+
