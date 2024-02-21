@@ -1,5 +1,5 @@
 import productsList from "./products.json" assert { type: "json" };
-import orderBy from "../node_modules/lodash/fp/orderBy";
+import orderBy from "../node_modules/lodash-es/orderBy.js";
 
 export function productsListComponent() {
   const section = document.createElement("section");
@@ -7,8 +7,9 @@ export function productsListComponent() {
   section.style.padding = "10px";
 
   const list = document.createElement("ul");
+  const sortedByPrice = orderBy(productsList, ["price"], ["asc"]);
 
-  productsList.forEach((product) => {
+  sortedByPrice.forEach((product) => {
     const listItem = document.createElement("li");
     listItem.textContent = `${product.title} - $${product.price}`;
     list.appendChild(listItem);
