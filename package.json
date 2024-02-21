@@ -1,0 +1,21 @@
+{
+  "name": "ts-es-modules-and-npm",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w & http-server",
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "Marce Zapaia <marce@apx.school> (https://apx.school)",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}
